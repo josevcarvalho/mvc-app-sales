@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MvcAppSales.Data;
 
@@ -10,9 +11,11 @@ using MvcAppSales.Data;
 namespace MvcAppSales.Migrations
 {
     [DbContext(typeof(MvcAppSalesContext))]
-    partial class MvcAppSalesContextModelSnapshot : ModelSnapshot
+    [Migration("20240110182921_RenameColumnSeller")]
+    partial class RenameColumnSeller
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

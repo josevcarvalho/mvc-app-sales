@@ -5,7 +5,7 @@ namespace MvcAppSales.Data
 {
     public class SeedingService(MvcAppSalesContext context)
     {
-        private MvcAppSalesContext _context = context;
+        private readonly MvcAppSalesContext _context = context;
 
         public void Seed()
         {

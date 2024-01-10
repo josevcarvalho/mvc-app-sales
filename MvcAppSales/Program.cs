@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using MvcAppSales.Data;
+using MvcAppSales.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<MvcAppSalesContext>(options =>
@@ -9,6 +10,8 @@ builder.Services.AddDbContext<MvcAppSalesContext>(options =>
 });
 
 builder.Services.AddScoped<SeedingService>();
+builder.Services.AddScoped<SellerService>();
+builder.Services.AddScoped<DepartmentService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
